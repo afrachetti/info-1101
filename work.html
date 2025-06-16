@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work - Alex Frachetti</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <style>
+    .hero-small {
+       background-color: #f2f0f5 ;
+       text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .work-section {
+      padding: 2rem;
+    }
+
+    .work-section h2 {
+      text-align: center ;
+      color: #5e3b76;
+      margin-bottom:  1rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns:  repeat(auto-fit , minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white ; 
+      border-radius: 8px ;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+
+      transform: scale(1.02) ;
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card-details {
+      display: none;
+      padding: 1rem;
+      border-top: 1px solid #eee;
+    }
+
+    .card.expanded .card-details {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html" class="active">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero-small">
+    <h1>My Work</h1>
+    <p>Explore my work in photography, drones, and GIS.</p>
+  </section>
+
+  <main>
+    <section class="work-section">
+      <h2>Photography</h2>
+      <div class="gallery-grid">
+        <div class="card">
+          <img src="photo1.jpg" alt="Photography 1">
+          <div class="card-details">
+            <p> details about this photo project.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="photo2.jpg" alt="Photography 2">
+          <div class="card-details">
+            <p>details about this photo project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section">
+      <h2>Drone</h2>
+      <div class="gallery-grid">
+        <div class="card">
+          <img src="drone1.jpg" alt="Drone Work 1">
+          <div class="card-details">
+            <p>details about this  project.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="drone2.jpg" alt="Drone Work 2">
+          <div class="card-details">
+            <p>details about this  project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section">
+      <h2>GIS</h2>
+      <div class="gallery-grid">
+        <div class="card">
+          <img src="gis1.jpg" alt="GIS Project 1">
+          <div class="card-details">
+            <p>details about this  project.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="gis2.jpg" alt="GIS Project 2">
+          <div class="card-details">
+            <p>details about this  project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alex Frachetti.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+
+      card.addEventListener('click' , () => {
+        card.classList.toggle('expanded');
+      });
+    });
+  </script>
+</body>
+</html>
